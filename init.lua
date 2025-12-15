@@ -6,5 +6,5 @@ require('basic')
 require('options')
 
 -- load lazy.nvim (package manager) --
-require('plugins')
+require('plugin_setup')
 
