@@ -27,8 +27,8 @@ return {
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = { 
         preset = 'enter',
-        ["<Tab>"] = { "hide", "fallback" },
-        ["<S-Tab>"] = {"show"}
+        --["<Tab>"] = { "hide", "fallback" },
+        ["<S-Tab>"] = {"show","show_signature", "fallback"},
     },
 
     appearance = {
@@ -38,13 +38,22 @@ return {
     },
 
     -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = false } },
+    completion = { 
+        keyword = { range="prefix" },
+        menu = {
+            draw = { treesitter = { "lsp" } },
+        },
+        trigger = { show_on_trigger_character = true},
+        documentation = { auto_show = false } },
 
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
+
+    --signature help when tying
+    signature = { enabled = true },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
     -- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
