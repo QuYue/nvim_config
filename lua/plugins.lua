@@ -17,7 +17,12 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-    require("nvim-tree").setup {}
+    require("nvim-web-devicons").setup{default=true,}
+    require("nvim-tree").setup {
+        on_attach = function(bufnr)
+            require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
+        end,
+    }
     end,
   }
 })
