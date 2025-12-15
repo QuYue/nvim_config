@@ -34,5 +34,5 @@ require("lazy").setup({
     -- LSP manager
     require("plugins.mason"),
     -- Github Copilot
-    require("plugins.Copilot"),
+    require("plugins.copilot"),
 })
