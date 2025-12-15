@@ -32,5 +32,7 @@ require("lazy").setup({
     require("plugins.blink_cmp"),
 
     -- LSP manager
-    require("plugins.mason")
+    require("plugins.mason"),
+    -- Github Copilot
+    require("plugins.Copilot"),
 })
