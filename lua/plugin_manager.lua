@@ -27,6 +27,7 @@ local function my_on_attach(bufnr)
   end
 
 require("lazy").setup({
+    -- "tanvirtin/monokai.nvim",
     require("plugins.nvim-tree"),
-
+    require("plugins.blink_cmp"),
 })

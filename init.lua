@@ -10,3 +10,7 @@ require('keymaps')
 -- load plugin_manager (lazy-nvim) --
 require('plugin_manager')
 
+-- load colorscheme --
+-- require('colorscheme')
+
+
