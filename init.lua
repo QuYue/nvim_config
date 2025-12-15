@@ -1,10 +1,12 @@
 -- load basic --
 require('basic')
 
-
 -- load options --
 require('options')
 
--- load lazy.nvim (package manager) --
-require('plugin_setup')
+-- load keymaps --
+require('keymaps')
+
+-- load plugin_manager (lazy-nvim) --
+require('plugin_manager')
 
