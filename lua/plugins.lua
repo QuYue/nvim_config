@@ -27,15 +27,6 @@ local function my_on_attach(bufnr)
   end
 
 require("lazy").setup({
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-    require("nvim-web-devicons").setup({default=true,})
-    require("nvim-tree").setup({
-      on_attach=my_on_attach,
-      filters={git_ignored=false,},
-    })
-    end,
-  }
+    require("plugins.nvim-tree"),
+
 })
