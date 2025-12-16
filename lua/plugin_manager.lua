@@ -31,6 +31,7 @@ require("lazy").setup({
     require("plugins.nvim-tree"),
     require("plugins.blink_cmp"),
     require("plugins.butterline"),
+    require("plugins.lualine"),
 
     -- LSP manager
     require("plugins.mason"),

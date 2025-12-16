@@ -28,8 +28,22 @@ return {
           -- width = 30,
       },
       renderer = {
-          group_empty = true
-      }
+          -- 把只有一个子目录的路径合并显示
+          group_empty = true,
+
+          -- 显示目录层级的 | 线
+          indent_markers = {
+            enable = true,
+            inline_arrows = true,
+            icons = {
+                corner = "└ ",
+                edge   = "│ ",
+                item   = "│ ",
+                bottom = "─ ",
+                none   = "  ",
+                },
+            },
+        }
     })
     end,
 }
