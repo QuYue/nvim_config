@@ -25,7 +25,7 @@ return {
           number = false,
           relativenumber = false,
           signcolumn = "yes",
-          width = 30,
+          -- width = 30,
       },
       renderer = {
           group_empty = true

@@ -11,7 +11,7 @@ require('keymaps')
 require('plugin_manager')
 
 -- load colorscheme --
--- require('colorscheme')
+require('colorscheme')
 
 -- load LSP
 require('lsp')
