@@ -30,6 +30,7 @@ require("lazy").setup({
     -- "tanvirtin/monokai.nvim",
     require("plugins.nvim-tree"),
     require("plugins.blink_cmp"),
+    require("plugins.butterline"),
 
     -- LSP manager
     require("plugins.mason"),

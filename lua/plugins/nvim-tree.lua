@@ -20,6 +20,16 @@ return {
     require("nvim-tree").setup({
       on_attach=my_on_attach,
       filters={git_ignored=false,},
+      view = { 
+          side = "left",
+          number = false,
+          relativenumber = false,
+          signcolumn = "yes",
+          width = 30,
+      },
+      renderer = {
+          group_empty = true
+      }
     })
     end,
 }

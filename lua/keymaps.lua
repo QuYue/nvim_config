@@ -30,3 +30,10 @@ end, { noremap = true, silent = true })
 -- terminal 使用 Esc 退出编辑模式
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { silent = true })
 
+-- Tab/Shift-Tab 切 buffer
+-- 下一个 buffer
+vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
+-- 上一个 buffer
+vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
+-- 鼠标点击
+vim.keymap.set("n", "<leader>bp", ":BufferLinePick<CR>", { silent = true })
