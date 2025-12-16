@@ -26,3 +26,7 @@ vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entere
 
 -- ShowTabline
 vim.o.showtabline = 0
+
+-- Confirm before exiting unsaved changes
+vim.o.confirm = true
+

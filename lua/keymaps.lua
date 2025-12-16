@@ -42,6 +42,7 @@ vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
 -- 鼠标点击
 vim.keymap.set("n", "<leader>bp", ":BufferLinePick<CR>", { silent = true })
 
+vim.keymap.set("n", "<leader>q", ":Bdelete<CR>", { silent = true })
 
 ------------------------------
 -- Telescope Keymaps

@@ -19,8 +19,8 @@ return {
 --            },
             -- bufferline.lua
             options = {
-		        -- close_command = "bdelete! %d",       -- 点击关闭按钮关闭
-		        -- right_mouse_command = "bdelete! %d", -- 右键点击关闭
+		        close_command = "Bdelete %d",       -- 点击关闭按钮关闭
+		        right_mouse_command = "Bdelete %d", -- 右键点击关闭
 		        -- always_show_butterline = false,
                 custom_filter = function(buf_number)
                     -- 过滤掉 [No Name] buffer
