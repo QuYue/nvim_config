@@ -6,3 +6,6 @@ vim.o.encoding = "UTF-8"
 vim.g.loaded_netrw = 1
 vim.g.loaded_newtrwPlugin = 1
 
+-- Port for markdown
+vim.g.mkdp_port = 8010
+
