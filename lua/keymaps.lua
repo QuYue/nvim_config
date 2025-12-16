@@ -1,3 +1,7 @@
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
+
+
 -- Ctrl + b 打开/关闭 Nvim-Tree 目录
 vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
@@ -37,3 +41,24 @@ vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { silent = true })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { silent = true })
 -- 鼠标点击
 vim.keymap.set("n", "<leader>bp", ":BufferLinePick<CR>", { silent = true })
+
+
+------------------------------
+-- Telescope Keymaps
+------------------------------
+--local ok, tel_builtin = pcall( require, "telescope.builtin" )
+-- 查找文件
+--if ok then
+vim.keymap.set('n', "<C-p>", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true, desc = "Find Files (Telescope)" })
+-- 全局搜索文本 
+vim.keymap.set('n', "<C-f>", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true, desc = "Live Grep (Telescope)" })
+-- 列出打开的 buffers
+vim.keymap.set('n', "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true, desc = "List Buffers (Telescope)" })
+-- 帮助文档
+vim.keymap.set('n', "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true, desc = "Help Tags (Telescope)" })
+
+
+
+
+
+

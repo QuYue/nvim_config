@@ -20,14 +20,6 @@ return {
 			extensions = { "nvim-tree", "toggleterm" },
 			sections = {
 				lualine_a = {
-                    {
-                        "fileformat",
-                        symbols = {
-                            unix = "",
-                            dos  = "",
-                            mac  = "",
-                        },
-                    },
 					{
 						"mode",
 						icons_enabled = true,

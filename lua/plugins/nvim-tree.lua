@@ -18,6 +18,8 @@ return {
     config = function()
     require("nvim-web-devicons").setup({default=true,})
     require("nvim-tree").setup({
+      sync_root_with_cwd = true,
+      respect_buf_cwd = true,
       on_attach=my_on_attach,
       filters={git_ignored=false,},
       view = { 

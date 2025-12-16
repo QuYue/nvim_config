@@ -32,6 +32,7 @@ require("lazy").setup({
     require("plugins.blink_cmp"),
     require("plugins.butterline"),
     require("plugins.lualine"),
+    require("plugins.telescope"),
 
     -- LSP manager
     require("plugins.mason"),
