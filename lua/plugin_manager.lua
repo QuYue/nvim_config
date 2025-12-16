@@ -34,6 +34,8 @@ require("lazy").setup({
     require("plugins.lualine"),
     require("plugins.telescope"),
 
+    -- Markdown preview
+    require("plugins.markdown-preview"),
     -- LSP manager
     require("plugins.mason"),
     -- Github Copilot
