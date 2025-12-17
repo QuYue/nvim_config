@@ -13,7 +13,7 @@ require('plugin_manager')
 -- load colorscheme --
 require('colorscheme')
 
--- load LSP
+-- load LSP --
 require('lsp')
 
 

@@ -4,19 +4,6 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         require("bufferline").setup({
---            options = {
-                -- diagnostics = "nvim_lsp",
-                -- always_show_butterline = true, 
---                offsets = {
---                    {
---                        filetype = "NvimTree",
---                        text = "File Explorer",
---                        highlight = "Directory",
---                        text_align = "left",
---                        separator = true,
---                    },
---                },
---            },
             -- bufferline.lua
             options = {
 		        close_command = "Bdelete %d",       -- 点击关闭按钮关闭
@@ -44,10 +31,14 @@ return {
 				        text = "File Explorer" ,
 				        text_align = "left",
 				        separator = true,
+                        -- highlight = "BufferLineFileExplorer",
 			        },
 		        },
             }
         })
     end,
 }
+
+
+
 

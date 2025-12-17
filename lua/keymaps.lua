@@ -1,3 +1,7 @@
+-- <leader> -- 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:w<CR>a', { noremap = true, silent = true })
 
@@ -59,6 +63,53 @@ vim.keymap.set('n', "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true
 vim.keymap.set('n', "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true, desc = "Help Tags (Telescope)" })
 
 
+
+------------------------------
+-- Comment Keymaps
+------------------------------
+-- 行注释：<leader> + \
+vim.keymap.set("n", "<leader>\\", function()
+    require("Comment.api").toggle.linewise.current()
+end, {
+    noremap = true,
+    silent = true,
+    desc = "Toggle line comment",
+})
+-- 行注释：<leader> + \  (视觉模式)
+vim.keymap.set("v", "<leader>\\", function()
+    vim.api.nvim_feedkeys(
+        vim.api.nvim_replace_termcodes("<ESC>", true, false, true),
+        "nx",
+        false
+    )
+    require("Comment.api").toggle.linewise(vim.fn.visualmode())
+end, {
+    noremap = true,
+    silent = true,
+    desc = "Toggle line comment (visual)",
+})
+
+-- 块注释：<leader> + Shift + \  (也就是 <leader>|)
+vim.keymap.set("n", "<leader>|", function()
+    require("Comment.api").toggle.blockwise.current()
+end, {
+    noremap = true,
+    silent = true,
+    desc = "Toggle block comment",
+})
+-- 块注释：<leader> + Shift + \  (视觉模式)
+vim.keymap.set("v", "<leader>|", function()
+    vim.api.nvim_feedkeys(
+        vim.api.nvim_replace_termcodes("<ESC>", true, false, true),
+        "nx",
+        false
+    )
+    require("Comment.api").toggle.blockwise(vim.fn.visualmode())
+end, {
+    noremap = true,
+    silent = true,
+    desc = "Toggle block comment (visual)",
+})
 
 
 

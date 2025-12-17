@@ -33,6 +33,7 @@ require("lazy").setup({
     require("plugins.butterline"),
     require("plugins.bufdelete"),
     require("plugins.lualine"),
+    require("plugins.comment"),
     require("plugins.telescope"),
 
     -- Markdown preview
