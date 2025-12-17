@@ -112,5 +112,15 @@ end, {
 })
 
 
+------------------------------
+-- 缩进 indentation keymaps
+------------------------------
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+
+
+
+
+
 
 
