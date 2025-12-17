@@ -40,7 +40,10 @@ return {
 
 				lualine_x = {},
 
-				lualine_y = {},
+				lualine_y = {
+                    "venv-selector",
+                    "encoding",
+                },
 
 				lualine_z = {
 					"progress",

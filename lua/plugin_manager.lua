@@ -42,4 +42,8 @@ require("lazy").setup({
     require("plugins.mason"),
     -- Github Copilot
     require("plugins.copilot"),
+
+    -- Python plugins   
+--    require("plugins.venv-selector"),
+    require("plugins.iron"),
 })
